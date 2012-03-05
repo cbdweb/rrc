@@ -1,0 +1,309 @@
+@CHARSET "ISO-8859-1";
+
+/*******************************************************************************
+/* Common attributes                                                           *
+/*******************************************************************************/
+/*  * {	border: 1px solid red; } */   
+.hidden {
+	display : none;
+}
+
+.vishid {
+	visibility:hidden;
+}
+
+body {
+	font-size: 11px;
+	margin: 0px 0px;
+	padding: 0px;
+	background-color: #EEEEEE;
+	font-family: Helvetica;
+	/*width : 320px; */
+	width : 100%;
+}
+
+#header,#footer {
+	display: block;
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	 /* background: url("../imgs/bg.png") repeat-x center top; */
+	background: url("../imgs/bg.png") repeat-x center top;
+	
+}
+
+#header {
+	top: 0px;
+	color: white;
+	text-shadow: #000 0px 1px 1px;
+	text-align: center;
+	text-decoration: none;
+}
+
+
+#container {
+	display: block;
+	position: absolute;
+	left: 0px;
+	overflow: hidden;
+	width: 100%;
+}
+
+#divRoute,#divProfile,#divUseage {
+	float: left;
+	/*display : block;*/
+	overflow : auto;
+	/*position : realitive;*/
+}
+#ulRouteEdit {
+	z-index : 50000;
+	position : absolute;
+	width : 275px;
+	left : 10px;
+	top : -2px;
+	-webkit-border-radius: 8px;
+	padding : 10px;
+	border : 3px solid #000000;
+	background : #EEEEEE;
+}
+
+#ulRouteEdit li {
+		border-bottom: 0;
+		line-height: 12px;
+		padding: 0;
+}
+
+#ulRouteEdit table{
+	width : 100%	
+}
+#ulRouteEdit td{
+	vertical-align:text-top;
+	padding : 0 0 10px 0;	
+}
+
+#ulRouteEdit select {
+	font-size : 17px;	
+}
+#ulRouteEdit label {
+	padding : 0 0 3px 0;	
+}
+ul {
+	padding: 0px;
+	width: 97%;
+	margin: 0px 5px;
+	background-color: white;
+	-webkit-border-radius: 8px;
+	border: 1px solid rgb(217, 217, 217);
+}
+
+li {
+	list-style-type: none;
+	color: black;
+	border-bottom: 1px rgb(217, 217, 217) solid;
+}
+
+.blueButton
+{
+	border-left: 12px;
+	border-right: 12px;
+	color: white;
+	text-shadow: #000 0px 1px 1px;
+	-webkit-border-image:url("../imgs/blueButton.png") 0 14 0 14;
+}
+.whiteButton
+{
+	border-left: 12px;
+	border-right: 12px;
+	color: black;
+	text-shadow: #fff 0px 1px 1px;
+	-webkit-border-image:url("../imgs/whiteButton.png") 0 14 0 14;
+}
+
+
+.blackButton{
+	border-left: 12px;
+	border-right: 12px;
+	color: white;
+	text-shadow: #000 0px 1px 1px;
+	-webkit-border-image:url("../imgs/grayButton.png") 0 14 0 14;
+}
+.blackLeftButton{
+	border-left: 12px;
+	border-right: 5px;
+	color: white;
+	text-shadow: #000 0px 1px 1px;
+	-webkit-border-image: url("../imgs/left.png") 0 5 0 12;
+}
+.blackRightButton{
+	border-left: 5px;
+	border-right: 12px;
+	color: white;
+	text-shadow: #000 0px 1px 1px;
+	-webkit-border-image: url("../imgs/right.png") 0 12 0 5;
+}
+
+
+.borderImageBtn, .borderEditBtn{
+	margin: 0;
+	width:60px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	float: left;
+	margin-left: 10px;
+	margin-right : 12px;
+}
+.borderEditBtn {
+	margin : 0;
+	width : 30px;	
+	position : absolute;
+	top : 0px;
+	right : 10px;
+	z-index : 100;
+	display : none;	
+}
+
+.gMap  {
+	width : 100%;
+}
+
+.eGraph {
+	width : 97%;
+	border : 1px solid black;
+	margin : 0  auto;
+	background-repeat : no-repeat;
+}
+#legend{
+	text-align : center;	
+}
+.thinbg{
+	background : url(../imgs/thinuseagegreen.png) no-repeat top;
+	background-position-x: -178px;
+	width : 200px;
+	overflow: hidden;
+} 
+.txtRed{
+	color : #FF0000;
+	font-weight : bold;
+}
+.battDiv, .battDivSpecial {
+	float: left;
+}	
+
+/*******************************************************************************
+/* Portrait attributes                                                         *
+/*******************************************************************************/
+body.portrait {
+	font-size: 17px;
+}
+.portrait input[type=text] {
+	font-size : 14px;
+	width : 200px;
+}
+.portrait #header {
+	height: 44px;
+}
+
+.portrait #header h1 {
+	font: bold 20px/28px Helvetica, sans-serif;
+	margin-top: 5px;		
+}
+.portrait #container {
+	height: 316px;
+	top: 49px;
+}
+.portrait #divRoute,.portrait #divProfile,.portrait #divUseage {
+	height: 316px;
+	/*width : 320px; */
+	width : 100%;
+}
+.portrait #divRouteEntry {
+	font-size : 17px;
+}
+
+.portrait #footer {
+	height: 44px;
+	top: 372px;
+}
+
+.portrait li {
+	line-height: 17px;
+	padding: 10px 10px 17px 10px;
+}
+
+.portrait .borderImageBtn, .portrait .borderEditBtn{
+	height: 30px;
+	font: bold 12px/30px Helvetica, sans-serif;
+	margin-top: 5px;
+}
+
+.portrait .gMap {
+	height : 295px;
+}
+.portrait .eGraph {
+	height: 290px;
+}
+
+/*******************************************************************************
+ /* Landscape attributes                                                        *
+ /*******************************************************************************/
+body.landscape {
+	font-size: 14px;
+	
+}
+.landscape input[type=text] {
+	font-size : 17px;
+	width : 200px;
+}
+
+.landscape #header {
+	height: 30px;
+}
+
+.landscape #header h1 {
+	font: bold 17px/30px Helvetica, sans-serif;
+	margin-top: 2px;		
+}
+
+.landscape #container {
+	height: 195px;
+	top: 35px;
+}
+
+.landscape #divRoute,.landscape #divProfile,.landscape #divUseage {
+	height: 195px;
+	/* width : 480px; */
+	width : 100%;
+}
+
+
+.landscape #footer {
+	height: 30px;
+	top: 238px;
+}
+
+.landscape li {
+	line-height: 11px;
+	padding: 10px 10px 11px 10px;
+}
+.landscape .borderImageBtn{
+	margin-right : 25px;
+	/*width : 100px;*/
+	width L 100%;
+}
+.landscape .borderImageBtn, .landscape .borderEditBtn{
+	height: 23px;
+	font: bold 12px/27px Helvetica, sans-serif;
+	margin-top: 2px;
+}
+.landscape .gMap {
+	height : 180px;
+}
+
+.landscape .eGraph {
+	height: 180px;
+}
+
+.landscape .battDivSpecial { 
+	margin-left: 30px;
+}
