@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>RouteRiseCalculator</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description>takes a JSON route string (from google maps) and calculates the data for the web.</description>
+    <display-name>routecalc</display-name>
+    <servlet-name>routecalc</servlet-name>
+    <servlet-class>net.elektrica.routecalc</servlet-class>
+  </servlet>
+  <servlet>
+    <description>provides browser details </description>
+    <display-name>Params</display-name>
+    <servlet-name>Params</servlet-name>
+    <servlet-class>net.cbdweb.Params</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>routecalc</servlet-name>
+    <url-pattern>/routecalc</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Params</servlet-name>
+    <url-pattern>/params</url-pattern>
+    <url-pattern>/Params</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>Logs whatever is posted to it into the console.</description>
+    <display-name>Logger</display-name>
+    <servlet-name>Logger</servlet-name>
+    <servlet-class>net.elektrica.Logger</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logger</servlet-name>
+    <url-pattern>/Logger</url-pattern>
+  </servlet-mapping>
+</web-app>
