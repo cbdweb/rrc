@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Params extends HttpServlet {
   public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
       IOException {
+	  //test svn mirror
     PrintWriter out = resp.getWriter();
     out.println("<html>");
     out.println("<center><table>");
